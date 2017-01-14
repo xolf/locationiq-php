@@ -25,10 +25,16 @@ class Geocoding {
         }
     }
 
-    public function request() {
-
+    /**
+     *
+     */
+    public function get() {
+        return [];
     }
 
+    /**
+     *
+     */
     protected function parseResult() {
 
     }

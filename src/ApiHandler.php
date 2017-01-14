@@ -45,7 +45,7 @@ class ApiHandler {
     {
         // https://locationiq.org/#docs
         if(!isset($params['method'])) {
-            throw new Exception("A method must be specified e.g. search/reverse/balance")
+            throw new Exception("A method must be specified e.g. search/reverse/balance");
         }
 
         $params['key'] = $this->getApiKey();
