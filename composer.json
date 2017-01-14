@@ -1,6 +1,7 @@
 {
   "name": "xolf/locationiq",
   "description": "Php Wrapper for https://locationiq.org",
+  "license": "MIT",
   "authors": [
     {
       "name": "xolf",

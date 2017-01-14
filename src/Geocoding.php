@@ -9,9 +9,20 @@ class Geocoding {
      */
     protected $apiHandler;
 
-    public function __construct(ApiHandler $apiHandler)
+    /**
+     * Geocoding constructor.
+     * @param $api
+     * @throws Exception
+     */
+    public function __construct($api)
     {
-        $this->setApiHandler($apiHandler);
+        if(is_string($api)) {
+            $this->setApiHandler(ApiHandler::create($api));
+        } else if ($api instanceof ApiHandler) {
+            $this->setApiHandler($api);
+        } else {
+            throw new Exception("Unknown Api: ".var_export($api, true));
+        }
     }
 
     public function request() {
